@@ -15,7 +15,7 @@ export const page1: PageType = {
 export const page2: PageType = {
     logoText: "Tarwiiga Sites",
     title: "Example 2",
-    link: "/adgen/",
+    link: "/adgen",
     headline: "",
     description: "",
     phone_number: "",
