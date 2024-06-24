@@ -1,17 +1,8 @@
 'use client'
 import {useState} from 'react';
-import {PageType} from "@/utils/types";
+import {PageType, SiteType} from "@/utils/types";
 
-interface HeaderProps {
-    page: PageType;
-    home_page: PageType;
-    page1: PageType;
-    page2: PageType;
-}
-
-const Header = (props: HeaderProps) => {
-
-    const {page, home_page, page1, page2} = props
+const Header = ({site}: {site: SiteType}) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -20,11 +11,11 @@ const Header = (props: HeaderProps) => {
     };
 
     return (
-        <header className={`bg-[${page.bgColor}] text-[${page.textColor}] fixed w-full top-0 z-10`}>
+        <header className={`bg-[${site.bg_color}] text-[${site.text_color}] fixed w-full top-0 z-10`}>
             <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-                <a href={home_page.link} className="text-xl font-bold">{page.logoText}</a>
+                <a href={site.home_page.link} className="text-xl font-bold">{site.name}</a>
                 <nav className="hidden md:flex space-x-4">
-                    {[page1, page2].map((page: PageType) => (
+                    {[site.page1, site.page2].map((page: PageType) => (
                         <a
                             key={page.title}
                             href={page.link}
@@ -45,7 +36,7 @@ const Header = (props: HeaderProps) => {
             </div>
             {isOpen && (
                 <nav className="md:hidden bg-gray-200">
-                    {[page1, page2].map((page: PageType) => (
+                    {[site.page1, site.page2].map((page: PageType) => (
                         <a
                             key={page.title}
                             href={page.link}

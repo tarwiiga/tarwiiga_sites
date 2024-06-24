@@ -1,10 +1,10 @@
-import {PageType} from "@/utils/types";
+import {PageType, SiteType} from "@/utils/types";
 
-const Hero = ({page}: { page: PageType }) => {
+const Hero = ({site, page}: {site: SiteType, page: PageType}) => {
 
     return (
         <div
-            className={`h-screen bg-[${page.bgColor}] text-[${page.textColor}] flex items-center justify-center pt-16 pb-16`}>
+            className={`h-screen bg-[${site.bg_color}] text-[${site.text_color}] flex items-center justify-center pt-16 pb-16`}>
             <div className="text-center">
                 <h1 className="text-4xl font-bold">{page.headline}</h1>
                 <p className="mt-4 text-lg">{page.description}</p>
