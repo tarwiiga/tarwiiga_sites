@@ -27,7 +27,6 @@ export const home_page: PageType = {
 export const site: SiteType = {
     name: "Template",
     domain: "template",
-    url: "https://sites.tarwiiga.com/template",
     bg_color: "#ffffff",
     text_color: "#000000",
     home_page: home_page,

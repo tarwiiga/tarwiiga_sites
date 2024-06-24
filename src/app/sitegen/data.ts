@@ -27,7 +27,6 @@ export const home_page: PageType = {
 export const site: SiteType = {
     name: "SiteGen",
     domain: "sitegen",
-    url: "https://sites.tarwiiga.com/sitegen",
     bg_color: "#ffffff",
     text_color: "#000000",
     home_page: home_page,

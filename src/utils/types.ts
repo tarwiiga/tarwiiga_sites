@@ -9,7 +9,6 @@ export type PageType = {
 export type SiteType = {
     name: string,
     domain: string,
-    url: string,
     bg_color: string,
     text_color: string,
     home_page: PageType,
